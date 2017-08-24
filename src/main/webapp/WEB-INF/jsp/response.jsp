@@ -8,12 +8,9 @@
 </head>
 <body>
 <div align="center" class="page-header"
-<c:if test="${referrer!=null}">
-    <p style="font-size: 60px">Referrer: ${referrer} </p>
-</c:if>
-<c:if test="${referrer==null}">
-    <p style="font-size: 60px">No referrer :(</p>
-</c:if>
+    <c:forEach items="${headers}" var="item">
+        <p style="font-size: 20px">${item} </p>
+    </c:forEach>
 </div>
 </body>
 </html>
